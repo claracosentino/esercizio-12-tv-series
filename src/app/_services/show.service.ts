@@ -7,8 +7,8 @@ import { ApiService } from './api.service';
 export class DrinkService {
     constructor(private apiService: ApiService) {}
 
-    getElencoDrinks(letter: string) {
-        return this.apiService.searchByF(letter);
+    searchShow(query: string) {
+        return this.apiService.searchShow(query);
     }
 
 }

@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../_services/api.service';
 import { HttpClient } from '@angular/common/http';
-import Drink from '../_models/drink.model';
+import {ShowSearch} from '../_models/show.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
-  drinks: Drink[] = [];
+  shows: ShowSearch[] = [];
 
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
-    this.api.getElencoDrinks('a').subscribe( (drinks) => {
-      this.drinks = drinks;
+    this.api.searchShow('queen').subscribe( (shows) => {
+      this.shows = shows;
     })
   }
 }
