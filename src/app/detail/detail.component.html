@@ -1,0 +1,46 @@
+<app-navbar />
+<section class="main-info-show">
+  <div class="container">
+    <div class="row m-4">
+      <div class="col-4 col-lg-2">
+        <img [src]="shows.image.original" class="w-100" alt="">
+      </div>
+      <div class="summary col-8 col-lg-7">
+        <p>{{shows.summary}}</p>
+      </div>
+      <div class="show-info col-12 col-lg-3 d-felx align-items-center">
+        <div>
+          <p>Network: {{shows.network.name}}</p>
+          <p>Schedule: {{shows.schedule.days}} at {{shows.schedule.time}}</p>
+          <p>Status: {{shows.status}}</p>
+          <p>Show type: {{shows.type}}</p>
+          <p>Genres :  QUI CAPISCO</p>
+          <p>Official site: {{shows.officialSite}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2>Main</h2>
+<p>Nome: {{shows.name}}</p>
+<p>Id serie / film: {{shows.id}}</p>
+
+<h2>Stagioni</h2>
+<ng-container *ngFor="let season of seasons; index as i">
+    <p>Numero stagione: {{seasons[i].number}}</p>
+</ng-container>
+
+<h2>Episodi suddivisi</h2>
+<ng-container *ngFor="let season of seasons">
+  <h2>Stagione {{season.number}}</h2>
+  <ng-container *ngFor="let episode of episodes; let i = index">
+    <p *ngIf="episode.season === season.number">
+      Numero stagione: {{episode.season}}
+      Numero episodio della stagione: {{episode.number}}
+    </p>
+  </ng-container>
+</ng-container>
+
+
+
+

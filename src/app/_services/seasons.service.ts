@@ -4,15 +4,11 @@ import { ApiService } from './api.service';
 @Injectable({
  providedIn: 'root',
 })
-export class ShowService {
+export class SeasonsService {
     constructor(private apiService: ApiService) {}
 
-    searchShow(query: string) {
-        return this.apiService.searchShow(query);
-    }
-
-    shows(id: number) {
-        return this.apiService.shows(id)
+    seasons(id: number) {
+        return this.apiService.seasons(id)
     }
 
 }
