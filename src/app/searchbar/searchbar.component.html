@@ -1,7 +1,7 @@
  <div class="input-group">
-      <input type="text" class="form-control" placeholder="Cerca una serie..." name="title" [(ngModel)]="jsonIn.title" required >
+      <input type="text" class="form-control" placeholder="Cerca una serie..." name="title" [(ngModel)]="jsonIn.title" (keydown.enter)="handleSearch($event)" required >
       
-        <button routerLink="/list/{{jsonIn.title}}" class="btn btn-outline-secondary" type="button" id="button-addon2">
+        <button  routerLink="/list/{{jsonIn.title}}" (click)="handleSearch($event)" class="btn btn-outline-secondary" type="button" id="button-addon2">
           <i class="bi bi-search"></i>
         </button>
   </div>

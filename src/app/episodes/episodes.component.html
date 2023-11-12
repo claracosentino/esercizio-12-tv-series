@@ -1,0 +1,30 @@
+<app-navbar />
+<section class="episodes">
+    <div class="container">
+        <app-buttons-main-episodes/>
+
+        <h1>{{shows.name}}</h1>
+
+        <div class="show-info w-50 mt-5">
+            <h2>Seasons</h2>
+            <ul class="list-group list-group-flush">
+                <ng-container *ngFor="let season of seasons; index as i">
+                    <li class="list-group-item"><a [href]="currentUrl + '#' + seasons[i].number">Season number: {{seasons[i].number}}</a></li>
+                </ng-container>
+            </ul>
+
+            <ng-container *ngFor="let season of seasons">
+                <h2 class="mt-4" id="{{season.number}}">Season number {{season.number}}</h2>
+                <ul class="list-group list-group-flush" >
+                    <ng-container *ngFor="let episode of episodes; let i = index">
+                        <li class="list-group-item" *ngIf="episode.season === season.number">
+                            <p>Episode number:  <span>{{episode.number}}</span></p>
+                            <p>Date:  <span>{{episode.airdate}}</span></p>
+                            <p>Name:  <span>{{episode.name}}</span></p>
+                        </li>
+                    </ng-container>
+                </ul>
+            </ng-container>
+        </div>
+    </div>
+</section>

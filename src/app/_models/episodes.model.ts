@@ -1,6 +1,7 @@
 export interface Episodes {
     "name": string,
     "season": number,
-    "number": number
+    "number": number,
+    "airdate": string
 }
 

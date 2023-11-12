@@ -14,6 +14,8 @@ import { SeasonsService } from './_services/seasons.service';
 import { ShowService } from './_services/show.service';
 import { EpisodesService } from './_services/episodes.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ButtonsMainEpisodesComponent } from './buttons-main-episodes/buttons-main-episodes.component';
+import { EpisodesComponent } from './episodes/episodes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     ListComponent,
     SearchbarComponent,
     DetailComponent,
-    NavbarComponent
+    NavbarComponent,
+    ButtonsMainEpisodesComponent,
+    EpisodesComponent
   ],
   imports: [
     BrowserModule,

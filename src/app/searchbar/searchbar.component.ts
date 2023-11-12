@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-searchbar',
@@ -9,9 +10,13 @@ export class SearchbarComponent implements OnInit {
     title: ''
   }
 
-  constructor() {}
+  constructor(private router:Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
 
+  }
+
+  handleSearch(event:any){
+    this.router.navigate(['/list/' + this.jsonIn.title], { relativeTo: this.route });
   }
 }

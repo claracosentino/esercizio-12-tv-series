@@ -1,4 +1,4 @@
-<app-navbar />
+<app-navbar/>
 <div class="container lista-film">
     <div class="row">
         <h2>Titolo cercato: {{searchedTitle}}</h2>
@@ -10,7 +10,7 @@
                     <img  src="{{show.image.medium}}" class="card-img-top" alt="immagine {{show.name}}" height="385px">
                 </ng-container>
                 <ng-container *ngIf="show.image == null">
-                    <img  src="https://static.tvmaze.com/images/no-img/no-img-portrait-text.png" class="card-img-top" height="385px" alt="immagine {{show.name}}" >
+                    <img src="https://static.tvmaze.com/images/no-img/no-img-portrait-text.png" class="card-img-top" height="385px" alt="immagine {{show.name}}" >
                 </ng-container>
                 <div class="card-body">
                     <h5 class="card-title">{{show.name}} - {{show.id}}</h5>

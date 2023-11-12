@@ -1,0 +1,16 @@
+<div class="app-buttons-main-episodes">
+    <div class="bottoni row justify-content-center">
+            <button routerLink="{{handleClickOnMain()}}" type="button" 
+                class="btn" 
+                [class.btn-outline-light]="checkIfEpisodesIsSelected()" 
+                [class.btn-light]="!checkIfEpisodesIsSelected()">
+                Main
+            </button>
+            <button routerLink="{{handleClickOnEpisodes()}}" type="button"
+                class="btn"
+                [class.btn-outline-light]="!checkIfEpisodesIsSelected()" 
+                [class.btn-light]="checkIfEpisodesIsSelected()">
+                Episodes
+            </button>
+    </div>
+</div>
